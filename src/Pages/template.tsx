@@ -1,8 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './rocher.css'
-import ndli from '../assets/ndli.png'
 
 import cursor from "../assets/cursor.png";
 import zeroPour from "../assets/0pour.png";
@@ -21,7 +17,6 @@ import centPour from "../assets/100pour.png";
 import CrazyVoice from "../Components/CrazyVoice";
 
 function Template() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
