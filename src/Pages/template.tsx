@@ -22,15 +22,12 @@ function Template() {
     <>
       <div className="Container Container_principal">
         <div className="Titre">
-          <h1> l'eau c'est beau</h1>
+          <h1>Crazy Button</h1>
         </div>
         <div className="Container Container_infos">
           <div className="Container Container_description">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus optio vero nobis labore molestiae, deleniti, ab esse
-              nulla dolores fuga sapiente quod. At nostrum tenetur quos quo, et
-              sunt modi!
+              Ce bouton a pour but de vous rendre fou (en tout cas nous oui)
             </p>
           </div>
           <div className="Container Container_image_text">
@@ -54,14 +51,13 @@ function Template() {
             </div>
             <div className="container_text">
               <div className="container_text_titre">
-                <p>Titre de la section</p>
+                <p>Vous n'etês pas prêt</p>
               </div>
               <div className="container_text_infos">
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem maxime quo minima mollitia. Excepturi, suscipit! Vero
-                  vel repellat, mollitia eum numquam delectus, reiciendis ab
-                  vitae voluptatum dolor deleniti. Ad, voluptatem.
+                  Ce bouton est trop Crazyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+                  #thuglife
+                  La madame brûle comme la planète. Elle, c'est quand on monte le son, la planète, c'est quand on monte la pollution.
                 </p>
               </div>
             </div>
