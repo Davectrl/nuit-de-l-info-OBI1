@@ -1,10 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import poumon_robot from '../assets/poumons_robot.png'
 import poumon_humain from '../assets/poumons_humain.png'
 import './Intro.css'
-import ndli from '../assets/ndli.png'
+
 import { useNavigate } from 'react-router-dom'
 
 
