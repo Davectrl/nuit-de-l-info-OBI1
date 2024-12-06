@@ -81,7 +81,10 @@ const Draggable = () => {
                   break;
                 case 4:
                   navigate('/Plancton');
-                  break;              
+                  break;      
+                case 5:
+                  navigate('/Template');        
+                  break;
                 default:
                   console.log('Index out of range');
                   break;
