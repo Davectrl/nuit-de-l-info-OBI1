@@ -1,14 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import plancton_nutriments from '../assets/plancton_nutriment.png'
 import './intro.css'
-import ndli from '../assets/ndli.png'
+
 import { useNavigate } from 'react-router-dom'
 
 
 function Plancton() {
-  const [count, setCount] = useState(0)
+  
   const navigate = useNavigate ();
 
   return (

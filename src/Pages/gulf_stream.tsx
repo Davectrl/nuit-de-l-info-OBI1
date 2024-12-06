@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import gulf_stream_image from '../assets/gulf_stream.png'
 import './intro.css'
-import ndli from '../assets/ndli.png'
+
 import { useNavigate } from 'react-router-dom'
 
 
 function Gulf_stream() {
   const navigate = useNavigate();
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>

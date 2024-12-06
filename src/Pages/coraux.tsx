@@ -1,14 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import coraux_os from '../assets/coraux_os.png'
 import './rocher.css'
-import ndli from '../assets/ndli.png'
 import { useNavigate } from 'react-router-dom'
 
 
 function Coraux() {
-  const [count, setCount] = useState(0)
+
   const navigate = useNavigate ();
 
   return (

@@ -1,14 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import algue_poumons from '../assets/algues.png'
 import './rocher.css'
-import ndli from '../assets/ndli.png'
+
 import { useNavigate } from 'react-router-dom'
 
 
 function Algues() {
-  const [count, setCount] = useState(0)
+  
   const navigate = useNavigate();
 
   return (
