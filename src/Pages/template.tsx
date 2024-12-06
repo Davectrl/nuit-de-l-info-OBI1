@@ -15,8 +15,10 @@ import centPour from "../assets/100pour.png";
 
 
 import CrazyVoice from "../Components/CrazyVoice";
+import { useNavigate } from 'react-router-dom';
 
 function Template() {
+  const navigate = useNavigate();
 
   return (
     <>
@@ -63,7 +65,9 @@ function Template() {
             </div>
           </div>
         </div>
-        <button className='Bouton_retour'>Retours à la map</button>
+        <button className='Bouton_retour'
+        onClick={() => navigate('/Menu')}
+        >Retours à la map</button>
         
       </div>
     </>
