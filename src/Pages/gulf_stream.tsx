@@ -1,5 +1,5 @@
 import gulf_stream_image from '../assets/gulf_stream.png'
-import './intro.css'
+import './Intro.css'
 
 import { useNavigate } from 'react-router-dom'
 

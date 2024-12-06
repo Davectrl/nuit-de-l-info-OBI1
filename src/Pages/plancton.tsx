@@ -1,5 +1,5 @@
 import plancton_nutriments from '../assets/plancton_nutriment.png'
-import './intro.css'
+import './Intro.css'
 
 import { useNavigate } from 'react-router-dom'
 

@@ -1,6 +1,6 @@
 
 import coeur_image from '../assets/coeur.png'
-import './intro.css'
+import './Intro.css'
 import { useNavigate } from 'react-router-dom'
 
 
