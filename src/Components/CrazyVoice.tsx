@@ -2,18 +2,26 @@ import React, { useState, useEffect, useRef } from 'react';
 import Cookies from 'js-cookie';
 
 type VolumeControlProps = {
-  imageSrc: string; // URL de l'image
+  imageSrc: string; // URL de l'image de volume
   maxVolume?: number; // Volume maximal, par défaut 100
   minVolume?: number; // Volume minimal, par défaut 0
+  volumeImages?: string[]; // Liste des images en fonction du volume
 };
 
-const VolumeControl: React.FC<VolumeControlProps> = ({ imageSrc, maxVolume = 100, minVolume = 0 }) => {
+const VolumeControl: React.FC<VolumeControlProps> = ({
+  imageSrc,
+  maxVolume = 100,
+  minVolume = 0,
+  volumeImages = [], // Passer un tableau d'images pour chaque tranche de volume
+}) => {
   const [volume, setVolume] = useState<number>(() => {
     const savedVolume = Cookies.get('volume');
-    return savedVolume ? Math.min(maxVolume, Math.max(minVolume, parseInt(savedVolume, 10))) : 50;
-  }); // Initialisation avec les cookies ou une valeur par défaut
+    return savedVolume
+      ? Math.min(maxVolume, Math.max(minVolume, parseInt(savedVolume, 10)))
+      : 50;
+  });
 
-  const [rotation, setRotation] = useState<number>((volume / maxVolume) * 360); // Rotation initiale basée sur le volume
+  const [rotation, setRotation] = useState<number>((volume / maxVolume) * 360);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   // Sauvegarder le volume dans les cookies à chaque changement
@@ -30,10 +38,9 @@ const VolumeControl: React.FC<VolumeControlProps> = ({ imageSrc, maxVolume = 100
       const deltaY = e.clientY - centerY;
       const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
 
-      const normalizedAngle = (angle + 360) % 360; // Convertit en angle positif
+      const normalizedAngle = (angle + 360) % 360; // Convertir en angle positif
       setRotation(normalizedAngle);
 
-      // Calcule le volume en fonction de l'angle (de 0 à 360)
       const newVolume = Math.min(maxVolume, Math.max(minVolume, Math.round((normalizedAngle / 360) * maxVolume)));
       setVolume(newVolume);
     }
@@ -49,6 +56,12 @@ const VolumeControl: React.FC<VolumeControlProps> = ({ imageSrc, maxVolume = 100
     window.removeEventListener('mouseup', handleMouseUp);
   };
 
+  // Calculer l'image à afficher en fonction du volume
+  const getVolumeImage = () => {
+    const index = Math.floor(volume / 10); // Divise le volume par 10 pour créer des tranches de 0-9, 10-19, etc.
+    return volumeImages[index] || imageSrc; // Utilise l'image par défaut si aucune image n'est trouvée pour cette tranche
+  };
+
   return (
     <div style={{ textAlign: 'center', userSelect: 'none' }}>
       <div
@@ -60,8 +73,22 @@ const VolumeControl: React.FC<VolumeControlProps> = ({ imageSrc, maxVolume = 100
           cursor: 'grab',
         }}
       >
-        <img src={imageSrc} alt="Volume Control" style={{ width: '200px', height: '200px', display: 'block' }} />
+        <img
+          src={imageSrc} // L'image qui tourne
+          alt="Volume Control"
+          style={{ width: '200px', height: '200px', display: 'block' }}
+        />
       </div>
+
+      {/* Image qui change à côté */}
+      <div style={{ display: 'inline-block', marginLeft: '20px' }}>
+        <img
+          src={getVolumeImage()} // L'image qui change selon le volume
+          alt="Volume Image"
+          style={{ width: '100px', height: '100px', display: 'block' }}
+        />
+      </div>
+
       <div style={{ marginTop: '20px', fontSize: '1.2em' }}>Volume: {Math.round(volume)}%</div>
     </div>
   );

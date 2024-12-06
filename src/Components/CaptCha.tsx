@@ -116,7 +116,7 @@ const BubbleGame: React.FC = () => {
     // Vérifiez les conditions de victoire
     if (pairsOfA >= 4 && trios >= 2) {
       alert("Félicitations ! Vous avez gagné !");
-      navigate("/");
+      navigate("/Menu");
       resetGame();
     }
   }, [pairsOfA, trios]);

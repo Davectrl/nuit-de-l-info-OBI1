@@ -1,3 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: bold;
+  text-align: justify;
+  text-align-last: center; /* Centre la dernière ligne */
+  -moz-text-align-last: center;
+  --shadow-bleu-clair: #155988;
+  --rouge-transparant: rgba(255, 0, 0,0.5);
+  height: 100vh;
+  width: 100%;
+  
+}
+
 .logo {
     height: 6em;
     padding: 1.5em;
@@ -34,3 +55,187 @@
     color: #888;
   }
   
+
+  
+  .container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  
+  .Container_principal{
+    flex-direction: column;
+    background-image: url('../assets/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh ;
+    color: white;
+  }
+  
+  .Titre{
+    width: 100%;
+    height: 23vh;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1{
+    font: caption;
+    font-size: 500%;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: bold;
+  }
+  
+  .Container_infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    height: 67vh;
+  
+  }
+  
+  .Container_description{
+  
+    width: 50%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    font-size: 150%;
+    text-align: justify;
+    text-align-last: center; 
+    -moz-text-align-last: center; 
+  }
+  
+  
+  .Container_image_text{
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    border-radius: 25px;
+    
+    padding: 10px;
+    box-shadow: 0px 0px 10px 2px var(--shadow-bleu-clair);
+  }
+  
+  .container_text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-right:15px;
+  }
+  
+  .container_text_titre{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 250%;
+  }
+  
+  .container_text_infos{
+    display: flex;
+    height: 60%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    text-align: justify;
+    text-align: justify;
+    text-align-last: center; 
+    -moz-text-align-last: center; 
+  }
+  
+  .container_image{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container_image img{
+   width: 300px;
+   border-radius: 25px;
+  
+  }
+
+  .Block_intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rouge-transparant);
+    width: 70%;
+    padding: 5%;
+    border: solid, 5px, red;
+    border-radius: 20px;
+  }
+  
+  .fond{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  transition: all 1s ease-in-out;
+  background-image: url('../assets/Sea.png');
+  }
+
+  .block_intro_images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .block_intro_Titre {
+    font-size: 300%;
+    margin-bottom: 20px;
+    font-style: bold;
+    color: white;
+  }
+
+
+  button{
+    background-color: var(--rouge-transparant);
+    border : solid, 2px, red;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    font-style: bold;
+    font-size: 110%;
+  
+  }
+
+  .Bouton_retour{
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);;
+    box-shadow: 0px 0px 10px 2px var(--shadow-bleu-clair);
+    margin-top: 20px;  
+  }
+
+  .block_intro_Message{
+    color: white;
+    font-style: bold;
+    line-height: 1.8; /* Espacement des lignes (1.8x la hauteur normale) */
+    word-spacing: 0.2em;
+  }
+
+  .block_intro_images img{
+    width: 150px;
+  }
+
+  .block_intro_images {
+    font-size: 300%;
+    color: white;
+    font-style: bold;
+  }
